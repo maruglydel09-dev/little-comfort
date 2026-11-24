@@ -1,11 +1,10 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A little box of comfort ♡</title>
+<title>Baby Mimisaur's Corner 🖤</title>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Pacifico&display=swap');
@@ -16,79 +15,113 @@
 
 body {
   margin: 0;
-  background: #f8eee7;
-  color: #674332;
+  background: #f5edf9;
+  color: #45334f;
   font-family: 'Nunito', sans-serif;
-  text-align: center;
   overflow-x: hidden;
 }
 
-.container {
-  width: 100%;
-  max-width: 480px;
-  margin: auto;
-  padding: 35px 22px 50px;
+body::before {
+  content: "♡";
+  position: fixed;
+  top: 30px;
+  left: 12px;
+  font-size: 80px;
+  color: #e6d4ef;
+  z-index: -1;
 }
 
-.top {
-  font-size: 11px;
-  letter-spacing: 3px;
-  color: #b18a75;
+body::after {
+  content: "✦";
+  position: fixed;
+  right: 15px;
+  bottom: 30px;
+  font-size: 90px;
+  color: #e6d4ef;
+  z-index: -1;
+}
+
+.container {
+  max-width: 480px;
+  margin: auto;
+  padding: 25px 18px 45px;
+}
+
+.card {
+  background: #fffaff;
+  border: 1px solid #e8d8f0;
+  border-radius: 27px;
+  padding: 25px 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 25px rgba(91, 61, 110, 0.07);
+}
+
+.tag {
+  display: inline-block;
+  background: #eee1f6;
+  color: #80618f;
+  border-radius: 30px;
+  padding: 8px 14px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
 }
 
 h1 {
   font-family: 'Pacifico', cursive;
-  font-size: 36px;
+  font-size: 34px;
+  line-height: 1.5;
+  color: #735383;
   font-weight: normal;
-  margin: 20px 0 10px;
-  color: #81563c;
+  margin: 18px 0 8px;
 }
 
-.sub {
+h2 {
+  font-size: 18px;
+  color: #72527f;
+  margin-top: 0;
+}
+
+p {
   font-size: 14px;
-  color: #9a7965;
+  line-height: 1.9;
 }
 
-.hero {
-  font-size: 85px;
-  margin: 28px 0;
+.subtitle {
+  color: #987eaa;
+  font-size: 13px;
+}
+
+.main-character {
+  margin: 22px auto 10px;
+  font-size: 75px;
   animation: float 3s ease-in-out infinite;
 }
 
 @keyframes float {
+  0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-9px); }
 }
 
-.box {
-  background: #fffaf6;
-  border: 1px solid #edd7c7;
-  border-radius: 25px;
-  padding: 24px 18px;
-  margin: 20px 0;
-  box-shadow: 0 7px 20px #9a725015;
-}
-
-.box h2 {
-  font-size: 18px;
-  margin-top: 0;
-}
-
-.box p {
-  font-size: 14px;
-  line-height: 1.9;
+.divider {
+  color: #c4a5d6;
+  letter-spacing: 7px;
+  margin: 15px;
 }
 
 button {
   border: none;
   border-radius: 30px;
+  background: #76558a;
+  color: white;
   padding: 14px 20px;
-  margin: 8px 4px;
   font-family: 'Nunito', sans-serif;
-  font-size: 14px;
   font-weight: 800;
-  background: #795039;
-  color: #fff8f1;
+  font-size: 13px;
+  margin: 7px 3px;
   cursor: pointer;
+  transition: 0.2s;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -96,78 +129,109 @@ button:active {
   transform: scale(0.96);
 }
 
-.light {
-  background: #f1d9c8;
-  color: #795039;
+button.secondary {
+  background: #f0e3f5;
+  color: #725381;
+}
+
+button.chocolate {
+  background: #76503e;
 }
 
 .snacks {
   display: flex;
+  gap: 9px;
   justify-content: center;
-  gap: 10px;
-  margin: 22px 0;
+  margin: 20px 0;
 }
 
 .snack {
-  width: 100px;
-  background: white;
-  border: 1px solid #ecd6c7;
-  border-radius: 18px;
-  padding: 14px 5px;
-  font-size: 32px;
+  flex: 1;
+  background: #f6effa;
+  border: 1px solid #ead9f2;
+  border-radius: 19px;
+  padding: 14px 4px;
+  color: #715180;
+  font-size: 29px;
 }
 
 .snack span {
   display: block;
-  font-size: 12px;
-  color: #805b43;
-  margin-top: 5px;
+  font-size: 11px;
   font-weight: 800;
+  margin-top: 6px;
 }
 
-#snackText, #hugText {
-  min-height: 50px;
+#snackMessage {
+  min-height: 60px;
   font-size: 13px;
   line-height: 1.8;
-  color: #9b7963;
+  color: #967ca7;
   padding: 5px;
 }
 
 .letter {
   display: none;
-  background: #fff3e9;
-  border-radius: 20px;
-  padding: 22px;
-  margin-top: 18px;
-  line-height: 2;
-  font-size: 14px;
   text-align: left;
-  animation: appear .5s ease;
+  background: #fbf3ff;
+  border: 1px dashed #d8bce7;
+  border-radius: 20px;
+  padding: 20px;
+  font-size: 14px;
+  line-height: 2;
+  margin-top: 15px;
+  white-space: pre-line;
+  animation: fade 0.4s ease;
 }
 
-@keyframes appear {
-  from { opacity: 0; transform: translateY(10px); }
+@keyframes fade {
+  from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-.footer {
-  font-family: 'Pacifico', cursive;
-  font-size: 17px;
-  margin-top: 30px;
-  color: #b18a75;
+#randomMessage {
+  min-height: 75px;
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 18px;
+  background: #f8effb;
+  color: #896d99;
+  font-size: 13px;
+  line-height: 1.9;
 }
 
-.heart {
+.footer {
+  text-align: center;
+  padding: 10px;
+  font-family: 'Pacifico', cursive;
+  color: #a68bb4;
+  font-size: 15px;
+}
+
+.floating {
   position: fixed;
+  bottom: 0;
   pointer-events: none;
   animation: rise 3s linear forwards;
-  z-index: 5;
+  z-index: 100;
 }
 
 @keyframes rise {
-  from { transform: translateY(0); opacity: 1; }
-  to { transform: translateY(-170px); opacity: 0; }
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-85vh) rotate(30deg);
+    opacity: 0;
+  }
 }
+
+.small {
+  color: #ad91bb;
+  font-size: 11px;
+}
+
 </style>
 </head>
 
@@ -175,173 +239,237 @@ button:active {
 
 <div class="container">
 
-  <div class="top">A LITTLE CARE PACKAGE ♡</div>
+  <!-- WELCOME -->
+  <div class="card">
+    <div class="tag">A SECRET LITTLE CORNER ♡</div>
 
-  <h1>Hey, you.</h1>
+    <h1>Baby Mimisaur</h1>
 
-  <p class="sub">I think today deserves a little softness.</p>
-
-  <div class="hero">🍫</div>
-
-  <div class="box">
-    <h2>Today's reminder</h2>
-    <p>
-      You are allowed to rest.<br>
-      You are allowed to take it slow.<br>
-      You are allowed to not be okay for a while.
+    <p class="subtitle">
+      for a tiny dinosaur having a not-so-tiny bad day
     </p>
+
+    <div class="main-character">🖤🎀</div>
+
+    <div class="divider">✦ ♡ ✦</div>
+
     <p>
-      You don't have to earn rest.<br>
-      You deserve it, even on your least productive days.
+      Hi, you. I made a little something for you.<br>
+      Nothing grand, just a tiny corner of the internet
+      where you can take a break from everything for a while.
+    </p>
+
+    <p>
+      No work stuff. No pressure.<br>
+      Just you, your favorite treats, and a little bit of cuteness.
     </p>
   </div>
 
-  <p style="font-size:14px; line-height:1.9">
-    I can't send these through your screen,<br>
-    but I can at least offer you a little something ♡
-  </p>
+  <!-- SNACK BOX -->
+  <div class="card">
+    <h2>♡ your emergency snack stash ♡</h2>
 
-  <div class="snacks">
-    <button class="snack light" onclick="snack('cadbury')">
-      🍫
-      <span>Cadbury</span>
-    </button>
+    <p>
+      Pick a treat. I made sure this stash is unlimited.
+    </p>
 
-    <button class="snack light" onclick="snack('cookie')">
-      🍪
-      <span>Cookies</span>
-    </button>
+    <div class="snacks">
 
-    <button class="snack light" onclick="snack('smores')">
-      🔥
-      <span>S'mores</span>
-    </button>
-  </div>
+      <button class="snack chocolate" onclick="chooseSnack('cadbury')">
+        🍫
+        <span>Cadbury</span>
+      </button>
 
-  <div id="snackText"></div>
+      <button class="snack" onclick="chooseSnack('cookies')">
+        🍪
+        <span>Cookies</span>
+      </button>
 
-  <div class="box">
-    <h2>One little letter for you 💌</h2>
-    <p>There's something I hope you remember today.</p>
+      <button class="snack" onclick="chooseSnack('smores')">
+        🔥
+        <span>S'mores</span>
+      </button>
 
-    <button onclick="toggleLetter()">
-      Open your letter ♡
-    </button>
+    </div>
 
-    <div class="letter" id="letter">
-      Hey, you.
-
-      I know today might be a little harder than usual.
-      Maybe your body is making you uncomfortable,
-      maybe everything feels a little more tiring,
-      or maybe you simply don't feel like doing anything.
-
-      And that's okay.
-
-      You don't have to force yourself to be cheerful.
-      You don't have to apologize for being quiet.
-      You don't have to accomplish anything today
-      just to feel like you've made the day worthwhile.
-
-      Please take care of yourself, okay?
-      Get comfortable, eat something you like,
-      drink some water, and rest whenever you can.
-
-      I hope this little thing makes you smile,
-      even if only for a few seconds.
-
-      You deserve kindness on the good days,
-      but especially on the days that aren't so good.
-
-      Sending you a warm hug,
-      an endless supply of Cadbury,
-      cookies for every craving,
-      and s'mores for every little inconvenience.
-
-      Be gentle with yourself today.
-      You matter. ♡
+    <div id="snackMessage">
+      Your treats are waiting. Go on, pick one. ♡
     </div>
   </div>
 
-  <button onclick="hug()">I need a hug 🧸</button>
-  <div id="hugText"></div>
+  <!-- LETTER -->
+  <div class="card">
+    <h2>Something I wanted to tell you 💌</h2>
 
-  <div class="box">
-    <h2>Today's permission slip 🌷</h2>
     <p>
-      Official permission to stay in bed longer,
-      ignore unnecessary things,
-      eat your favorite snacks,
-      and make absolutely no apologies for resting.
+      I think you deserve a little reminder today.
     </p>
-    <button class="light" onclick="surprise()">One last thing...</button>
-    <p id="surpriseText"></p>
+
+    <button onclick="openLetter()">
+      Open your little letter ♡
+    </button>
+
+    <div class="letter" id="letter">
+Hi, Baby Mimisaur. 🖤
+
+I know you're working right now, and I know today isn't exactly being nice to you. So I made you a little something to hopefully make your day a bit better, even if it's just for a few minutes.
+
+I know you still have things to do and responsibilities to attend to, but please don't forget to take care of yourself in the middle of all that, okay? If you get the chance, take a little break, stretch, drink some water, and let yourself breathe. No need to push yourself too hard today.
+
+I wish I could magically make your cramps disappear and give you all your favorite Cadbury, cookies, and s'mores right now. Unfortunately, hanggang virtual lang muna 'tong care package ko, but I hope it still manages to make you smile kahit konti.
+
+And hey, you don't have to reply to this or anything. I just wanted to make something for you, kasi you deserve little things that make your day better, too. Kahit busy ka, kahit maraming ginagawa, don't forget na your well-being matters just as much as everything else you have to finish.
+
+I hope the rest of your day goes a little easier on you. Konting tiis pa, and when you finally get to rest, sana makapagpahinga ka nang maayos. Be kind to yourself today, okay? Don't be too hard on yourself.
+
+So for now, here's your little corner of Cadbury, cookies, s'mores, and Kuromi. No bad days allowed in this tiny corner. Well, at least we'll try. ♡
+
+Take care of yourself, Baby Mimisaur. 🖤
+    </div>
+  </div>
+
+  <!-- RANDOM COMFORT -->
+  <div class="card">
+    <h2>Not having the best day? 🖤</h2>
+
+    <p>
+      Tap whenever you need a little reminder.
+    </p>
+
+    <button onclick="newMessage()">
+      Give me a tiny reminder
+    </button>
+
+    <div id="randomMessage">
+      A little reminder is waiting for you here. ♡
+    </div>
+  </div>
+
+  <!-- PERMISSION SLIP -->
+  <div class="card">
+    <h2>Official permission slip 🎀</h2>
+
+    <p>
+      You are officially allowed to:
+    </p>
+
+    <p>
+      ♡ Rest without feeling guilty<br>
+      ♡ Eat whatever makes you happy<br>
+      ♡ Take breaks from work when you can<br>
+      ♡ Have a slow day<br>
+      ♡ Ignore things that can wait<br>
+      ♡ Be a little grumpy, too
+    </p>
+
+    <button class="secondary" onclick="finalSurprise()">
+      One last little thing...
+    </button>
+
+    <div id="lastMessage" style="line-height:1.9; font-size:13px; margin-top:12px;"></div>
   </div>
 
   <div class="footer">
-    made with love & a little chocolate ♡
+    a little something made for you ♡
+    <p class="small">with chocolate, cookies, and a little bit of love.</p>
+    🖤 🎀 🍫
   </div>
 
 </div>
 
 <script>
-function snack(type) {
+
+function chooseSnack(type) {
+
   const messages = {
-    cadbury: "A whole stash of Cadbury just for you. No sharing. No negotiations. 🍫",
-    cookie: "Fresh cookies, still warm. Consider all of them yours. 🍪",
-    smores: "Toasted marshmallows, melted chocolate, and the coziest little s'mores. 🔥"
+    cadbury:
+      "🍫 Cadbury for Baby Mimisaur! This stash is exclusively yours. No sharing, no limits, no questions asked. I hope this makes your day a little sweeter.",
+
+    cookies:
+      "🍪 Freshly baked cookies! Imagine they're still warm, soft in the middle, and an unlimited supply. You deserve every single one.",
+
+    smores:
+      "🔥 S'mores for you! Toasted marshmallows, melted chocolate, and the perfect little treat to make today feel less terrible."
   };
 
-  document.getElementById("snackText").innerText = messages[type];
-  hearts();
+  document.getElementById("snackMessage").innerText = messages[type];
+  sprinkle();
 }
 
-function toggleLetter() {
+function openLetter() {
+
   const letter = document.getElementById("letter");
 
   if (letter.style.display === "block") {
     letter.style.display = "none";
   } else {
     letter.style.display = "block";
+    letter.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    sprinkle();
   }
 }
 
-function hug() {
+function newMessage() {
+
   const messages = [
-    "A very long hug. You don't have to let go just yet. 🧸",
-    "Imagine me handing you your favorite chocolate and telling you to rest. ♡",
-    "Here's a hug for the things you can't put into words.",
-    "No fixing anything. No advice. Just a hug. 🤎",
-    "If hugs could cure cramps, I'd send you a thousand right now."
+    "Baby Mimisaur, you don't have to finish everything all at once. One thing at a time, okay? ♡",
+
+    "Reminder: you are allowed to take a break even if your to-do list is still long. The world can wait a little.",
+
+    "I hope you know that having a difficult day doesn't mean you're doing a bad job. You're doing just fine.",
+
+    "If today is exhausting, then let it be exhausting. You don't need to pretend it's not. Just take things slowly.",
+
+    "Sending you an imaginary box of Cadbury, cookies, and s'mores because I feel like today requires an unreasonable amount of snacks. 🍫",
+
+    "Work can wait for a moment when you get the chance. Your body deserves a little consideration, too.",
+
+    "You made it this far into the day. That's something. Don't forget to give yourself a little credit, okay?",
+
+    "A tiny reminder from this corner: be kinder to yourself. You'd be gentle with someone else having your day, so do the same for you. ♡",
+
+    "I hope something unexpectedly nice happens to you today. You deserve a little plot twist in your favor.",
+
+    "Today's objective: survive, stay cozy, eat something good, and don't let the universe annoy you more than necessary. 🖤"
   ];
 
   const random = messages[Math.floor(Math.random() * messages.length)];
-  document.getElementById("hugText").innerText = random;
-  hearts();
+
+  document.getElementById("randomMessage").innerText = random;
+  sprinkle();
 }
 
-function surprise() {
-  document.getElementById("surpriseText").innerText =
-    "In case nobody has reminded you yet, you are someone worth caring for, checking up on, and making smile. I hope tomorrow is a little kinder to you. And until then, take all the time you need. ♡";
+function finalSurprise() {
 
-  hearts();
+  document.getElementById("lastMessage").innerText =
+    "And that's it. Just wanted to leave you with something small to remind you that even on days when you're tired, uncomfortable, busy, or not feeling like yourself, you still deserve nice things. I hope your favorite snacks find their way to you soon. Take care, Baby Mimisaur. 🖤🎀";
+
+  sprinkle();
 }
 
-function hearts() {
-  const symbols = ["🤎", "♡", "🍫", "✨", "🌷"];
+function sprinkle() {
 
-  for (let i = 0; i < 8; i++) {
-    const heart = document.createElement("span");
-    heart.className = "heart";
-    heart.innerText = symbols[Math.floor(Math.random() * symbols.length)];
-    heart.style.left = Math.random() * 90 + 5 + "vw";
-    heart.style.bottom = "10px";
-    heart.style.fontSize = (Math.random() * 18 + 15) + "px";
-    document.body.appendChild(heart);
+  const items = ["♡", "🖤", "🎀", "✦", "🍫", "✨"];
 
-    setTimeout(() => heart.remove(), 3000);
+  for (let i = 0; i < 12; i++) {
+
+    const element = document.createElement("div");
+    element.className = "floating";
+
+    element.innerText = items[Math.floor(Math.random() * items.length)];
+
+    element.style.left = Math.random() * 100 + "vw";
+    element.style.fontSize = (Math.random() * 16 + 16) + "px";
+    element.style.animationDuration = (Math.random() * 2 + 2) + "s";
+
+    document.body.appendChild(element);
+
+    setTimeout(() => {
+      element.remove();
+    }, 4000);
   }
 }
+
 </script>
 
 </body>
